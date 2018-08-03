@@ -2,6 +2,12 @@
 A quick and effective way to update your LIFX lights to display alerts by the
 National Weather Service. Currently the only supported feature from the NWS are
 issued alerts. This application calls the National Weather Service every 20
+seconds (by default).
+
+Currently, the application will only change lights for the following alerts:
+* Tornado Warning
+* Severe Thunderstorm Warning
+* Flash Flood Warning
 
 ### Installation
 1. `npm install` in this directory
