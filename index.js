@@ -11,7 +11,7 @@ axios.defaults.headers.common['Authorization'] = 'Bearer ' + config.token;
 
 
 getWeatherAlerts();
-setInterval(function() {getWeatherAlerts() }, 5000)
+setInterval(function() {getWeatherAlerts() }, config.refreshRate * 1000)
 
 function getWeatherAlerts() {
   axios.get('https://api.weather.gov/alerts?active=true&point=' + config.lat + ',' + config.lon).then(function(response) {

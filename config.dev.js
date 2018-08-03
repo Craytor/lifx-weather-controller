@@ -15,5 +15,7 @@ module.exports = {
       color: 'kelvin:9000',
       brightness: 1.0
     }
-  }
+  },
+  // how often to see if there are new alerts for your location in seconds.
+  refreshRate: 20,
 }
