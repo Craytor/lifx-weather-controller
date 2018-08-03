@@ -13,9 +13,9 @@ Currently, the application will only change lights for the following alerts:
 1. `npm install` in this directory
 2. `cp config.dev.js config.js` in this directory
 3. Edit the contents of `config.js`.
-  * You can request a token here: https://cloud.lifx.com/settings
-  * You can edit the colors array to your liking
-  * Edit the `refreshRate` to your liking. This is how many seconds you want
+    * You can request a token here: https://cloud.lifx.com/settings
+    * You can edit the colors array to your liking
+    * Edit the `refreshRate` to your liking. This is how many seconds you want
   to check the NWS's API to see if there are alerts for your location. The lower
   the value, the less latency.
 4. Run `node index.js` and the application will start.
