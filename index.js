@@ -9,7 +9,6 @@ var updateRequired = false
 
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + config.token;
 
-
 getWeatherAlerts();
 setInterval(function() {getWeatherAlerts() }, config.refreshRate * 1000)
 
@@ -18,15 +17,12 @@ function getWeatherAlerts() {
     var alerts = response.data.features;
 
     for(var i=0; i < alerts.length;  i++) {
-
       computeAlertEvent(alerts[i].properties.event)
 
       if(i == (alerts.length - 1)) {
         callLifxApi()
       }
-
     }
-
   })
 }
 
@@ -40,17 +36,15 @@ function computeAlertEvent(event) {
       updateRequired = true
     }
   } else if (event == 'Flash Flood Warning') {
-    if(determineEvent !== 'tstrm') {
+    if(determineEvent !== 'tstrm' && determineEvent !== 'tor') {
       determineEvent = 'ffw'
       updateRequired = true
     }
-  } else {
-    determineEvent = null
   }
 }
 
 function callLifxApi() {
-  console.log('calling')
+
   if(determineEvent == null) {
     if(updateRequired) {
       setLightsToDefaultState()

@@ -9,7 +9,7 @@ module.exports = {
     alerts: {
       ffw: 'green',
       tor: 'red',
-      tstrm: 'yellow'
+      tstrm: 'orange'
     },
     default: {
       color: 'kelvin:9000',
